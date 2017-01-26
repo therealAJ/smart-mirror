@@ -1,0 +1,10 @@
+// This is the top-level scss file. Import all other files in here.
+
+@import 'App';
+@import 'LeftPanel';
+@import 'RightPanel';
+@import 'Mirror';
+
+html, body, #react-root {
+    height: 100%;
+}
