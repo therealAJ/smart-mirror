@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class Mirror extends Component {
     
-    componentDidMount() {
+    /* componentDidMount() {
         navigator.getUserMedia(
             // constraints
             {video: true, audio: false},
@@ -18,11 +18,14 @@ class Mirror extends Component {
             }
         )
     }
+    */
 
     render() {
         return (
+            // <div className="Mirror">
+            //     <video autoPlay="true" id="videoFrame"></video>
+            // </div>
             <div className="Mirror">
-                <video autoPlay="true" id="videoFrame"></video>
             </div>
         );
     }
