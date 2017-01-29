@@ -3,7 +3,8 @@ var webpack = require('webpack');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: '#eval-source-map',
+  debug: true,
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     './src/index.jsx'
