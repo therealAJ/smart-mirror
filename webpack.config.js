@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
@@ -22,7 +23,22 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
+      },
+      {
+        test: /\.css$/,
+        loader: "style!css"
+      },
+      {
+        test: /\.js$/,
+        loaders: ['babel']
       }
     ]
-  }
+  },
+  plugins : [
+    new BowerWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+  ]
 }

@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 
 class Mirror extends Component {
     
-    /* componentDidMount() {
+     componentDidMount() {
         navigator.getUserMedia(
             // constraints
-            {video: true, audio: false},
+            //{video: true, audio: false},
             
             //success callback
             function (mediaStream) {
@@ -18,7 +18,7 @@ class Mirror extends Component {
             }
         )
     }
-    */
+    
 
     render() {
         return (

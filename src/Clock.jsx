@@ -7,14 +7,14 @@ class Clock extends Component {
         super();
         var now = new Date();
         this.state = {
-            time: dateFormat(now, "h:MM")
+            time: dateFormat(now, "h:MM TT")
         };
     }
 
     tick() {
         var now = new Date();
         this.setState({
-            time: dateFormat(now, "h:MM")
+            time: dateFormat(now, "h:MM TT")
         });
     }
 
@@ -26,9 +26,16 @@ class Clock extends Component {
 
 
     render() {
-        return <div className="clockContainer">
-        <h1 className="clock">{this.state.time}</h1>
-        </div>;
+        const now = new Date();
+        const dayOfWeek = dateFormat(now, "dddd");
+        const date = dateFormat(now, "mmmm d");
+        return (
+        <ul className="clockContainer">
+            <li>{this.state.time}</li>
+            <li>{dayOfWeek}</li>
+            <li>{date}</li>
+        </ul>    
+           )
     }
 }
 
