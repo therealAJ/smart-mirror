@@ -5,7 +5,7 @@ class Mirror extends Component {
      componentDidMount() {
         navigator.getUserMedia(
             // constraints
-            //{video: true, audio: false},
+            {video: true, audio: false},
             
             //success callback
             function (mediaStream) {
@@ -22,10 +22,8 @@ class Mirror extends Component {
 
     render() {
         return (
-            // <div className="Mirror">
-            //     <video autoPlay="true" id="videoFrame"></video>
-            // </div>
             <div className="Mirror">
+                <video autoPlay="true" id="videoFrame"></video>
             </div>
         );
     }

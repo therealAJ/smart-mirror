@@ -1,18 +1,22 @@
-import { createFetch, base, accept, parse } from 'http-client';
+import axios from 'axios';
 
 export default class StockFetcher {
 
-    static fetch(tick) {
-        const fetch = createFetch(
-            base('http://dev.markitondemand.com/MODApis/Api/v2'),
-            accept('application/json'),
-            parse('json')
-        )
+    static fetch(callback) {
+        const STOCK_URL = 'http://finance.google.com/finance/info?client=ig&q=NASDAQ%3AAAPL';
+        console.log(STOCK_URL);
 
-
-        fetch('/Quote/jsonp?symbol='+tick).then(response => {
-            console.log(response.jsonData)
-            return response;
-        })
+        axios
+            .get(STOCK_URL)
+            .then(function (response) {
+                var str = response.data;
+                var str1 = str.replace("//", "");
+                var json = JSON.parse(str1);
+                console.log(json[0].l);
+                callback(json[0].l);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 }
