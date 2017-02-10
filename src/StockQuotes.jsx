@@ -2,25 +2,34 @@ import React, {Component} from 'react';
 import StockFetcher from './StockFetcher.jsx'
 
 class StockQuotes extends Component {
+
     constructor() {
         super();
         this.state = {
-            loading: true,
-            prices: 0,
-            dailyFluctuations: []
+            stocks: []
         };
     }
 
     componentDidMount() {
         this.fetchStocks(stocks => {
-            this.setState({prices: stocks});
+            this.setState({stocks});
         })
     }
 
     render() {
         return (
             <div>
-                <h4>{this.state.prices}</h4>
+                <ul> 
+                    {this.state.stocks.map(stock => {
+                        return (
+                            <table>
+                                <tbody>
+                                    <tr><td>{stock.t}</td><td>{stock.l}</td><td>{stock.c}</td></tr>
+                                </tbody>
+                            </table>
+                        )
+                    })}
+                </ul>
             </div>
         )
     }
@@ -28,7 +37,6 @@ class StockQuotes extends Component {
     fetchStocks(callback) {
         StockFetcher.fetch(callback)
     }
-
 }
 
 export default StockQuotes
