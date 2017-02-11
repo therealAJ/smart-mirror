@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
-import Clock from './Clock.jsx';
-import StockQuotes from './StockQuotes.jsx';
+import YoutubeContainer from './YoutubeContainer.jsx';
+
+
 
 class RightPanel extends Component {
     render() {
         return (
             <div className="RightPanel"> 
-            <Clock />
-            <StockQuotes />
+            <YoutubeContainer />
             </div>
         )
     }
