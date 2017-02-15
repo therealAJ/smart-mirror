@@ -30,12 +30,21 @@ class Clock extends Component {
         const dayOfWeek = dateFormat(now, "dddd");
         const date = dateFormat(now, "mmmm d");
         return (
-        <ul className="clockContainer">
-            <li>{this.state.time}</li>
-            <li>{dayOfWeek}</li>
-            <li>{date}</li>
-        </ul>    
-           )
+            <div className="clockContainer row">
+                <div className='timeContainer col s12 m6 l6'>
+                   <ul>
+                        <li className='timeText'>{this.state.time}</li>
+                    </ul>
+                </div>
+                <div className='dateContainer col s12 m6 l6'>
+                    <ul>
+                        <li className='dowText'>{dayOfWeek}</li>
+                        <li className='dateText'>{date}</li>
+                    </ul>
+                </div>
+                
+            </div>    
+        )
     }
 }
 

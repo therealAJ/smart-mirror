@@ -22,7 +22,7 @@ class StockQuotes extends Component {
                 <ul> 
                     {this.state.stocks.map(stock => {
                         return (
-                            <table>
+                            <table key={stock.id}>
                                 <tbody>
                                     <tr><td>{stock.t}</td><td>{stock.l}</td><td>{stock.c}</td></tr>
                                 </tbody>

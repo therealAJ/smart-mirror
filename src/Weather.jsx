@@ -26,7 +26,7 @@ class Weather extends Component {
     render() {
         return (
             <div>
-                {this.state.weather}
+                {this.state.weather} &deg;C
                 {this.state.city}
                 {this.state.weatherDescription}
             </div>

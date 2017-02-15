@@ -8,7 +8,7 @@ class VideoList extends Component {
     
     
     render() {
-        const videoListArray = this.props.videos.map(video => {
+        const videoListArray = this.props.videos.slice(0,3).map(video => {
             return <VideoListItem key={video.etag} video={video} />
         })
 

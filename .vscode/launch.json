@@ -8,6 +8,9 @@
             "url": "http://localhost:3000",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
+            "sourceMapPathOverrides": {
+                "webpack:///*": "${workspaceRoot}/src/*"
+            },
             "diagnosticLogging": true
         },
         {
@@ -16,10 +19,9 @@
             "name": "Attach to Chrome",
             "port": 9222,
             "url": "http://localhost:3000",
-            "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "sourceMapPathOverrides": {
-                "webpack:///*": "${workspaceRoot}/build/*"
+                "webpack:///*": "${workspaceRoot}/src/*"
             }
         }
     ]
