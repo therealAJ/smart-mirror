@@ -18,18 +18,16 @@ class StockQuotes extends Component {
 
     render() {
         return (
-            <div>
-                <ul> 
-                    {this.state.stocks.map(stock => {
-                        return (
-                            <table key={stock.id}>
-                                <tbody className='stock-table-body'>
-                                    <tr><td className='stock-table-row'>{stock.t}</td><td className='stock-table-row'>{stock.l}</td><td className='stock-table-row'>{stock.c}</td></tr>
-                                </tbody>
-                            </table>
-                        )
-                    })}
-                </ul>
+            <div className='stock-table-body'>
+                 <table>
+                    <tbody>
+                         {this.state.stocks.map(stock => {
+                            return (
+                                <tr><td className='stc'>{stock.t}</td><td className='stc'>{stock.l}</td><td className='stc'>{stock.c}</td></tr>
+                            )
+                        })}                    
+                    </tbody>
+                 </table>
             </div>
         )
     }
