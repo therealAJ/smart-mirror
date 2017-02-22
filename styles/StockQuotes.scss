@@ -1,3 +1,40 @@
+ .stock-table-body {
+
+ }
+
+.st {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .stc {
     text-align: center;
+    white-space: nowrap;    
+}
+
+
+.stock-quote {
+  &.up {
+    color: green;
+    .change {
+      display: inline-block;
+      border-bottom: 8px solid green;
+    }
+  }
+  &.down {
+    color: red;
+    .change {
+      display: inline-block;
+      border-top: 8px solid red;
+    }
+  }
+
+  .change {
+    display: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-right: 2px;
+  }
 }

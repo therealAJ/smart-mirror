@@ -19,7 +19,7 @@ class StockQuotes extends Component {
     render() {
         return (
             <div className='stock-table-body'>
-                 <table>
+                 <table className='st'>
                     <tbody>
                          {this.state.stocks.map(stock => {
                             return (
