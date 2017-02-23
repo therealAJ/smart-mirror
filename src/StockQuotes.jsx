@@ -13,6 +13,7 @@ class StockQuotes extends Component {
     componentDidMount() {
         this.fetchStocks(stocks => {
             this.setState({stocks});
+            this.updateStockCssClasses();
         })
     }
 
@@ -23,7 +24,7 @@ class StockQuotes extends Component {
                     <tbody>
                          {this.state.stocks.map(stock => {
                             return (
-                                <tr><td className='stc'>{stock.t}</td><td className='stc'>{stock.l}</td><td className='stc'>{stock.c}</td></tr>
+                                <tr className='str'><td className='stc'>{stock.t}</td><td className='stc'>${stock.l}</td><td className='stc' id={stock.t}>{stock.c}</td></tr>
                             )
                         })}                    
                     </tbody>
@@ -35,6 +36,20 @@ class StockQuotes extends Component {
     fetchStocks(callback) {
         StockFetcher.fetch(callback)
     }
+
+    updateStockCssClasses() {
+        const stocks = this.state.stocks;
+        stocks.forEach((stock) => {
+            let stockSign = stock.c.split('')[0];
+            if (stockSign == '+') {
+              $('#' + stock.t).append("<div id='arrow-up'></div>");
+            }
+            if (stockSign == '-') {
+              $('#' + stock.t).append("<div id='arrow-down'></div>");
+            }
+        });
+    }
+
 }
 
 export default StockQuotes

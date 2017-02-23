@@ -1,9 +1,5 @@
- .stock-table-body {
-
- }
-
 .st {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -12,29 +8,18 @@
     white-space: nowrap;    
 }
 
+#arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid green;
+}
 
-.stock-quote {
-  &.up {
-    color: green;
-    .change {
-      display: inline-block;
-      border-bottom: 8px solid green;
-    }
-  }
-  &.down {
-    color: red;
-    .change {
-      display: inline-block;
-      border-top: 8px solid red;
-    }
-  }
-
-  .change {
-    display: none;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    margin-right: 2px;
-  }
+#arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid red;
 }
