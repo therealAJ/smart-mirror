@@ -14,8 +14,8 @@ class SearchBar extends Component {
     
     render() {
         return (
-            <div className='search-bar'>
-                <input onChange={event => this.onInputChange(event.target.value)} />                
+            <div className='search-bar container'>
+                <input placeholder='Youtube Search' onChange={event => this.onInputChange(event.target.value)} />                
             </div>
         );
     }
