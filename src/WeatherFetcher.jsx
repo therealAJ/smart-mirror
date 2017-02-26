@@ -10,10 +10,10 @@ export default class WeatherFetcher {
 
         const CORS_PROXY = 'https://crossorigin.me/'
         const DEMO_URL = CORS_PROXY + `http://samples.openweathermap.org/data/2.5/find?q=London&units=metric&appid=${DEMO_API_KEY}`         
-        //const WEATHER_URL = `http://api.openweathermap.org/data/2.5/find?q=Vancouver,can&units=metric&appId=${API_KEY}`;
+        const WEATHER_URL = `http://api.openweathermap.org/data/2.5/find?q=Vancouver,can&units=metric&appId=${API_KEY}`;
 
         axios
-        .get(DEMO_URL)
+        .get(WEATHER_URL)
         .then(response => {
             let city = response.data.list[0].name;
             let weatherCode = response.data.list[0].weather[0].description;

@@ -6,14 +6,10 @@ import VideoList from './VideoList.jsx';
 
 const API_KEY = 'AIzaSyDIKh8MYi9a5d8v8GLQkBcvh7Q4_lfbrfA';
 
-
 class YoutubeContainer extends Component {
     constructor(props) {
         super(props)
-
         this.state = { videos : [] };
-
-       
     }
 
     videoSearch(term) {
@@ -21,7 +17,6 @@ class YoutubeContainer extends Component {
             this.setState({ videos })
         );
     }
-    
     
     render() {
         return (
