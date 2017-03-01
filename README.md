@@ -1,6 +1,6 @@
 # smart mirror
 
-#### A place where you can view the weather, see stock information, and search youtube (and yourself of course).
+#### A place where you can view the weather, see stock information, and search youtube (and see yourself of course).
 
 [![License] (https://img.shields.io/badge/license-MIT%20License-blue.svg)]()
 [![Dependency Status](https://img.shields.io/david/therealAJ/smart-mirror.svg)](https://david-dm.org/therealAJ/smart-mirror)
