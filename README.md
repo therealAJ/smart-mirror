@@ -7,18 +7,18 @@
 
 ![alt tag](https://raw.githubusercontent.com/therealAJ/smart-mirror/master/demo.gif)
 
-##Installation and Usage
+### Installation and Usage
 
 To install and run, download repository and run it by using the command, ```npm start``` in the directory where server.js is located at. 
 Mirror will be served at ``` localhost:3000 ```
 
-##Technologies Used
+### Technologies Used
 **Frontend:** React.js
 
 **Backend:** Webpack
 
-##License
+### License
 Licensed under the MIT License.
 
-##Troubleshooting/Contact
+### Troubleshooting/Contact
 If having issues, contact alex.jordache@alumni.ubc.ca for help.
